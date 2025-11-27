@@ -130,7 +130,7 @@ main {
     color: #f8f9fa !important;
     line-height: 1.4;
     letter-spacing: 1px;
-    margin-top: calc(1.5rem + 10px) !important;
+    margin-top: calc(1.5rem + 5px) !important;
 }
 
 .countdown-wrapper {
@@ -535,7 +535,7 @@ footer {
     
     .cta-section {
         gap: 1rem;
-        margin-top: 0.5rem;
+        margin-top: 1.5rem;
         flex-direction: row; /* Keep row direction for logos */
         flex-wrap: wrap; /* Allow wrapping */
         justify-content: center;
