@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jingle Jam - GDG TEDU</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@300;400;600;800&family=Mountains+of+Christmas:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <canvas id="snow-canvas"></canvas>
+    
+    <div class="background-glow"></div>
+
+    <div class="container">
+        <header>
+            <a href="https://www.instagram.com/gdgoncampustedu/" target="_blank" class="logo-link">
+                <div class="logo">GDG on Campus <span class="highlight">TED University</span></div>
+            </a>
+        </header>
+        
+        <main>
+            <div class="hero-content">
+                <h1 class="event-title">Jingle <span class="jam-green">Jam</span></h1>
+                <p class="event-description">Code the Holidays. <br>Build something magical.</p>
+            </div>
+            
+            <div class="countdown-wrapper">
+                <div class="countdown-container">
+                    <h2 class="countdown-title">Time Until the Magic Begins</h2>
+                    <div id="countdown">
+                        <div class="time-unit">
+                            <div class="time-box">
+                                <span id="days">00</span>
+                            </div>
+                            <label>Days</label>
+                        </div>
+                        <div class="time-unit">
+                            <div class="time-box">
+                                <span id="hours">00</span>
+                            </div>
+                            <label>Hours</label>
+                        </div>
+                        <div class="time-unit">
+                            <div class="time-box">
+                                <span id="minutes">00</span>
+                            </div>
+                            <label>Minutes</label>
+                        </div>
+                        <div class="time-unit">
+                            <div class="time-box">
+                                <span id="seconds">00</span>
+                            </div>
+                            <label>Seconds</label>
+                        </div>
+                    </div>
+                    <p class="event-date">December 20, 2025</p>
+                </div>
+            </div>
+            
+            <div class="cta-section">
+                <img src="assets/tedu_logo.png" alt="TED University Logo" class="partner-logo tedu-logo">
+                
+                <a href="#register" class="register-btn">
+                    <span>Register Now</span>
+                    <div class="btn-glow"></div>
+                </a>
+
+                <img src="assets/gdglogo.png" alt="GDG Logo" class="partner-logo gdg-logo">
+            </div>
+        </main>
+
+        <section id="register" class="register-section">
+            <div class="form-container">
+                <h2>Join the Competition</h2>
+                <p>Fill out the form below to save your spot!</p>
+                
+                <!-- 
+                    GOOGLE SHEETS INTEGRATION:
+                    The JavaScript will handle the submission. 
+                    Make sure the 'name' attributes match the columns in your Google Sheet (excluding timestamp).
+                -->
+                <form id="registration-form" class="glass-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="Name" required placeholder="Your Full Name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="Email" required placeholder="Your University Mail (preferred)">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="university">University & Department</label>
+                        <input type="text" id="university" name="University" required placeholder="TED University - Computer Engineering">
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Submit Registration</button>
+                    <p id="form-status" style="text-align: center; margin-top: 1rem; display: none;"></p>
+                </form>
+            </div>
+        </section>
+        
+        <footer>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/gdgoncampustedu/" target="_blank" class="social-icon instagram" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.tiktok.com/@gdgoncampustedu" target="_blank" class="social-icon tiktok" aria-label="TikTok">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+                <a href="https://chat.whatsapp.com/Lvaq7kfMs298CoHqPLnk1F?mode=hqrc" target="_blank" class="social-icon whatsapp" aria-label="WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+            <p>&copy; 2025 GDG TEDU. Crafted with <span style="color: #e74c3c;">&hearts;</span> for the community.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
