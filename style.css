@@ -119,6 +119,11 @@ main {
     text-shadow: 2px 2px 0px #fff, 4px 4px 10px rgba(0,0,0,0.5);
 }
 
+.web-blue {
+    color: #3b82f6; /* Bright blue */
+    text-shadow: 2px 2px 0px #fff, 4px 4px 10px rgba(0,0,0,0.5);
+}
+
 .event-description {
     font-size: clamp(0.8rem, 1.8vw, 1.2rem) !important;
     font-weight: 300;
