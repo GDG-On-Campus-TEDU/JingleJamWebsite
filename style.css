@@ -531,12 +531,24 @@ footer {
     .cta-section {
         gap: 1rem;
         margin-top: 0.5rem;
+        flex-direction: row; /* Keep row direction for logos */
+        flex-wrap: wrap; /* Allow wrapping */
+        justify-content: center;
     }
     
     .register-btn {
         padding: 1rem 2rem;
         font-size: 1.2rem;
-        width: 80%;
+        width: 100%; /* Full width to force new line */
+        order: 1; /* Button first */
+        max-width: 300px;
+        margin-bottom: 0.5rem;
+    }
+
+    .partner-logo {
+        order: 2; /* Logos second */
+        height: 60px;
+        margin: 0 10px; /* Spacing between logos */
     }
 
     .form-container {
