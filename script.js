@@ -88,8 +88,40 @@ window.addEventListener('resize', () => {
     canvas.height = window.innerHeight;
 });
 
+// Accordion Logic
+const accordions = document.querySelectorAll('.accordion-header');
+
+accordions.forEach(accordion => {
+    accordion.addEventListener('click', () => {
+        accordion.classList.toggle('active');
+        const content = accordion.nextElementSibling;
+        
+        if (accordion.classList.contains('active')) {
+            content.style.maxHeight = content.scrollHeight + "px";
+            content.style.padding = "0 0 1.5rem 0";
+        } else {
+            content.style.maxHeight = 0;
+            content.style.padding = "0";
+        }
+    });
+});
+
 initSnow();
 animateSnow();
+
+function toggleTeamInput(show) {
+    const teamMembersGroup = document.getElementById('team-members-group');
+    const teamMembersInput = document.getElementById('team-members');
+    
+    if (show) {
+        teamMembersGroup.style.display = 'block';
+        teamMembersInput.setAttribute('required', 'required');
+    } else {
+        teamMembersGroup.style.display = 'none';
+        teamMembersInput.removeAttribute('required');
+        teamMembersInput.value = ''; // Clear input if hidden
+    }
+}
 
 // --- GOOGLE SHEETS FORM SUBMISSION LOGIC ---
 const scriptURL = 'https://script.google.com/macros/s/AKfycbx7jLm0OGke-Pf7nX_pWgwCMWwtcBBQZCCuDSWSe8yvd4d9XuAddnV_WxLum__qvDOe/exec'; // <--- PASTE YOUR URL HERE
