@@ -171,90 +171,15 @@
                     The JavaScript will handle the submission. 
                     Make sure the 'name' attributes match the columns in your Google Sheet (excluding timestamp).
                 -->
-                <form id="registration-form" class="glass-form">
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="Name" required placeholder="Your Full Name">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="Email" required placeholder="Your University Mail (preferred)">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="Phone" required placeholder="05XX XXX XX XX">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="university">University & Department</label>
-                        <input type="text" id="university" name="University" required placeholder="TED University - Computer Engineering">
-                    </div>
-
-                    <!-- New Questions -->
-                    <div class="form-group">
-                        <label>Participation Type</label>
-                        <div class="radio-group">
-                            <label><input type="radio" name="Participation" value="Online" required> Online Participant</label>
-                            <label><input type="radio" name="Participation" value="Physical"> Physical Participant</label>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="level">Web Development Level</label>
-                        <select id="level" name="Level" required>
-                            <option value="" disabled selected>Select your level</option>
-                            <option value="Beginner">Beginner</option>
-                            <option value="Intermediate">Intermediate</option>
-                            <option value="Advanced">Advanced</option>
-                            <option value="Expert">Expert</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Technologies Used (Select all that apply)</label>
-                        <div class="checkbox-group">
-                            <label><input type="checkbox" name="Tech" value="HTML/CSS"> HTML / CSS</label>
-                            <label><input type="checkbox" name="Tech" value="JavaScript"> JavaScript</label>
-                            <label><input type="checkbox" name="Tech" value="React"> React</label>
-                            <label><input type="checkbox" name="Tech" value="Next.js"> Next.js</label>
-                            <label><input type="checkbox" name="Tech" value="Node.js"> Node.js</label>
-                            <label><input type="checkbox" name="Tech" value="Figma"> Figma</label>
-                            <label><input type="checkbox" name="Tech" value="Git/GitHub"> Git & GitHub</label>
-                            <label><input type="checkbox" name="Tech" value="Other"> Other</label>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="ai-experience">AI Tools Experience</label>
-                        <select id="ai-experience" name="AI_Experience" required>
-                            <option value="" disabled selected>Select your experience</option>
-                            <option value="New">Never heard of them</option>
-                            <option value="Tried">Tried a few times</option>
-                            <option value="Active">Actively using</option>
-                            <option value="Mandatory">Use them mandatorily in work</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Do you have a team?</label>
-                        <div class="radio-group" id="team-radio-group">
-                            <label><input type="radio" name="Team_Status" value="Has_Team" required onchange="toggleTeamInput(true)"> Yes, I have a team.</label>
-                            <label><input type="radio" name="Team_Status" value="Solo" onchange="toggleTeamInput(false)"> No, I will participate solo.</label>
-                            <label><input type="radio" name="Team_Status" value="Need_Team" onchange="toggleTeamInput(false)"> I don't have a team, please assign me one.</label>
-                        </div>
-                    </div>
-
-                    <div class="form-group" id="team-members-group" style="display: none;">
-                        <label for="team-members">Team Members' Names</label>
-                        <input type="text" id="team-members" name="Team_Members" placeholder="Name 1, Name 2, Name 3">
-                        <small style="color: #a0aec0; font-size: 0.8rem;">Max 4 people per team. Your team members must also fill out this form individually.</small>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn">Submit Registration</button>
-                    <p id="form-status" style="text-align: center; margin-top: 1rem; display: none;"></p>
-                </form>
+                <div class="registration-closed-message">
+                    <h3>Registrations are Closed</h3>
+                    <p class="closed-text">
+                        The magic has begun! <br>
+                        <span class="highlight-text">TED University Students:</span> If you still wish to join, please contact us via Instagram <a href="https://www.instagram.com/gdgoncampustedu/" target="_blank" class="insta-link">@gdgoncampustedu</a>.
+                    </p>
+                    <p class="closed-subtext">External registrations are now closed. See you next year!</p>
+                    <div class="shimmer-overlay"></div>
+                </div>
             </div>
         </section>
         
