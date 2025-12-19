@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jingle Web Jam - GDG TEDU</title>
     <!-- Favicon: Christmas Tree SVG -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎄</text></svg>">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎄</text></svg>">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@300;400;600;800&family=Mountains+of+Christmas:wght@700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@300;400;600;800&family=Mountains+of+Christmas:wght@700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
+
 <body>
     <canvas id="snow-canvas"></canvas>
-    
+
     <div class="background-glow"></div>
 
     <div class="container">
@@ -24,57 +29,89 @@
                 <div class="logo">GDG on Campus <span class="highlight">TED University</span></div>
             </a>
         </header>
-        
+
         <main>
             <div class="hero-content">
                 <h1 class="event-title">Jingle <span class="web-blue">Web</span> <span class="jam-green">Jam</span></h1>
                 <p class="event-description">Code the holidays. <br>Prove you are the ultimate prompt engineer.</p>
             </div>
-            
-            <div class="countdown-wrapper">
-                <div class="countdown-container">
-                    <h2 class="countdown-title">Time Until the Magic Begins</h2>
-                    <div id="countdown">
-                        <div class="time-unit">
-                            <div class="time-box">
-                                <span id="days">00</span>
-                            </div>
-                            <label>Days</label>
+
+            <section id="schedule" class="schedule-section">
+                <div class="schedule-container">
+                    <h2>Event Schedule</h2>
+                    <div class="schedule-grid">
+                        <div class="schedule-item">
+                            <div class="time">10.30 - 11.00</div>
+                            <div class="event">Opening</div>
                         </div>
-                        <div class="time-unit">
-                            <div class="time-box">
-                                <span id="hours">00</span>
-                            </div>
-                            <label>Hours</label>
+                        <div class="schedule-item">
+                            <div class="time">11.00 - 13.00</div>
+                            <div class="event">Round 1</div>
                         </div>
-                        <div class="time-unit">
-                            <div class="time-box">
-                                <span id="minutes">00</span>
-                            </div>
-                            <label>Minutes</label>
+                        <div class="schedule-item break">
+                            <div class="time">13.00 - 13.45</div>
+                            <div class="event">Lunch Break</div>
                         </div>
-                        <div class="time-unit">
-                            <div class="time-box">
-                                <span id="seconds">00</span>
-                            </div>
-                            <label>Seconds</label>
+                        <div class="schedule-item">
+                            <div class="time">13.45 - 14.30</div>
+                            <div class="event">Round 2</div>
+                        </div>
+                        <div class="schedule-item activity">
+                            <div class="time">14.30 - 15.00</div>
+                            <div class="event">Activity</div>
+                        </div>
+                        <div class="schedule-item">
+                            <div class="time">15.00 - 16.00</div>
+                            <div class="event">Round 3</div>
+                        </div>
+                        <div class="schedule-item activity">
+                            <div class="time">16.00 - 16.30</div>
+                            <div class="event">Activity</div>
+                        </div>
+                        <div class="schedule-item">
+                            <div class="time">16.30 - 18.00</div>
+                            <div class="event">Final Round</div>
+                        </div>
+                        <div class="schedule-item jury">
+                            <div class="time">18.00 - 20.30</div>
+                            <div class="event">Jury Evaluation</div>
+                        </div>
+                        <div class="schedule-item result">
+                            <div class="time">20.30 - 21.00</div>
+                            <div class="event">Results Announcement</div>
                         </div>
                     </div>
-                    <p class="event-date">December 20, 2025</p>
+                </div>
+            </section>
+        </main>
+
+        <section id="resources" class="resources-section">
+            <div class="resources-container">
+                <h2>Participant Guide</h2>
+                <p>Everything you need to know to build and deploy your project.</p>
+
+                <div class="language-toggle-container">
+                    <span class="toggle-label">Language:</span>
+                    <div class="toggle-switch">
+                        <input type="checkbox" id="lang-toggle">
+                        <label for="lang-toggle" class="toggle-slider">
+                            <span class="toggle-text tr">TR</span>
+                            <span class="toggle-text en">EN</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="pdf-viewer-container">
+                    <iframe id="pdf-frame" src="assets/guide_tr.pdf#navpanes=0" width="100%" height="600px"></iframe>
+                </div>
+
+                <div class="resource-buttons">
+                    <a id="download-link" href="assets/guide_tr.pdf" download class="resource-btn download-btn">
+                        <i class="fa-solid fa-download"></i> Download PDF
+                    </a>
                 </div>
             </div>
-            
-            <div class="cta-section">
-                <img src="assets/tedu_logo.png" alt="TED University Logo" class="partner-logo tedu-logo">
-                
-                <a href="#register" class="register-btn">
-                    <span>Register Now</span>
-                    <div class="btn-glow"></div>
-                </a>
-
-                <img src="assets/gdglogo.png" alt="GDG Logo" class="partner-logo gdg-logo">
-            </div>
-        </main>
+        </section>
 
         <section id="faq" class="faq-section">
             <div class="faq-container">
@@ -84,7 +121,9 @@
                     <div class="accordion-item">
                         <button class="accordion-header">What is Jingle Web Jam? <span class="icon">+</span></button>
                         <div class="accordion-content">
-                            <p>Jingle Web Jam is a creative web development competition that mixes GDG on Campus TEDU’s Christmas spirit with technology. Teams build a fun, Christmas themed, interactive mini website in 5–8 hours using AI-assisted development.</p>
+                            <p>Jingle Web Jam is a creative web development competition that mixes GDG on Campus TEDU’s
+                                Christmas spirit with technology. Teams build a fun, Christmas themed, interactive mini
+                                website in 5–8 hours using AI-assisted development.</p>
                         </div>
                     </div>
                     <!-- FAQ 2 -->
@@ -92,39 +131,51 @@
                         <button class="accordion-header">Can we use AI tools? <span class="icon">+</span></button>
                         <div class="accordion-content">
                             <p>Yes, that’s the whole point!</p>
-                            <p>You can use developer focused AI tools like <strong>Google Antigravity, Cursor, Gemini, GPT, or Copilot</strong>. They can help with coding, design, planning, and debugging.</p>
+                            <p>You can use developer focused AI tools like <strong>Google Antigravity, Cursor, Gemini,
+                                    GPT, or Copilot</strong>. They can help with coding, design, planning, and
+                                debugging.</p>
                         </div>
                     </div>
                     <!-- FAQ 3 -->
                     <div class="accordion-item">
-                        <button class="accordion-header">Are automatic website builders allowed? <span class="icon">+</span></button>
+                        <button class="accordion-header">Are automatic website builders allowed? <span
+                                class="icon">+</span></button>
                         <div class="accordion-content">
-                            <p>We only allow specific AI agents for assistance. Allowed technologies are: <strong>Google Antigravity, Cursor, Gemini, GPT, or Copilot</strong>. One-click automated website generators outside of these are not allowed.</p>
+                            <p>We only allow specific AI agents for assistance. Allowed technologies are: <strong>Google
+                                    Antigravity, Cursor, Gemini, GPT, or Copilot</strong>. One-click automated website
+                                generators outside of these are not allowed.</p>
                         </div>
                     </div>
                     <!-- FAQ 4 -->
                     <div class="accordion-item">
-                        <button class="accordion-header">What is the main goal of the competition? <span class="icon">+</span></button>
+                        <button class="accordion-header">What is the main goal of the competition? <span
+                                class="icon">+</span></button>
                         <div class="accordion-content">
-                            <p>The goal is to show how you can use AI as a powerful assistant while still demonstrating your own skills in design, problem solving, API integration, code structure, and deployment.</p>
+                            <p>The goal is to show how you can use AI as a powerful assistant while still demonstrating
+                                your own skills in design, problem solving, API integration, code structure, and
+                                deployment.</p>
                         </div>
                     </div>
                     <!-- FAQ 5 -->
                     <div class="accordion-item">
-                        <button class="accordion-header">Will there be extra challenges? <span class="icon">+</span></button>
+                        <button class="accordion-header">Will there be extra challenges? <span
+                                class="icon">+</span></button>
                         <div class="accordion-content">
-                            <p>Yes. During the event, we will give optional challenge tasks. Completing them gives extra points and increases your chance of winning.</p>
+                            <p>Yes. During the event, we will give optional challenge tasks. Completing them gives extra
+                                points and increases your chance of winning.</p>
                         </div>
                     </div>
                     <!-- FAQ 6 -->
                     <div class="accordion-item">
-                        <button class="accordion-header">What are the minimum requirements for the project? <span class="icon">+</span></button>
+                        <button class="accordion-header">What are the minimum requirements for the project? <span
+                                class="icon">+</span></button>
                         <div class="accordion-content">
                             <p>Each team must deliver:</p>
                             <ul>
                                 <li><strong>Real time AI integration</strong></li>
                                 <li><strong>Original design components</strong></li>
-                                <li><strong>A working live deployment</strong> (Mentors will support you in deploying your site!)</li>
+                                <li><strong>A working live deployment</strong> (Mentors will support you in deploying
+                                    your site!)</li>
                             </ul>
                         </div>
                     </div>
@@ -132,22 +183,26 @@
                     <div class="accordion-item">
                         <button class="accordion-header">How does the event work? <span class="icon">+</span></button>
                         <div class="accordion-content">
-                            <p>Teams choose a Christmas themed prompt, develop their project, receive mentor support, and present their final product to the jury.</p>
+                            <p>Teams choose a Christmas themed prompt, develop their project, receive mentor support,
+                                and present their final product to the jury.</p>
                         </div>
                     </div>
                     <!-- FAQ 8 -->
                     <div class="accordion-item">
                         <button class="accordion-header">Who can join? <span class="icon">+</span></button>
                         <div class="accordion-content">
-                            <p>The event is open to beginners and aspiring developers. The atmosphere is friendly, educational, and fun.</p>
+                            <p>The event is open to beginners and aspiring developers. The atmosphere is friendly,
+                                educational, and fun.</p>
                         </div>
                     </div>
                     <!-- FAQ 9 -->
                     <div class="accordion-item">
                         <button class="accordion-header">How are teams formed? <span class="icon">+</span></button>
                         <div class="accordion-content">
-                            <p>You can participate <strong>solo or as a team of up to 4 people</strong>. You can come with your own team or apply solo and we will match you with others if you wish.</p>
-                            <p style="margin-top: 0.5rem; font-size: 0.9em; color: #e2e8f0;"><em>Note: Solo participants and teams will be evaluated in the same category.</em></p>
+                            <p>You can participate <strong>solo or as a team of up to 4 people</strong>. You can come
+                                with your own team or apply solo and we will match you with others if you wish.</p>
+                            <p style="margin-top: 0.5rem; font-size: 0.9em; color: #e2e8f0;"><em>Note: Solo participants
+                                    and teams will be evaluated in the same category.</em></p>
                         </div>
                     </div>
                     <!-- FAQ 10 -->
@@ -165,7 +220,7 @@
             <div class="form-container">
                 <h2>Join the Competition</h2>
                 <p>Fill out the form below to save your spot!</p>
-                
+
                 <!-- 
                     GOOGLE SHEETS INTEGRATION:
                     The JavaScript will handle the submission. 
@@ -175,23 +230,28 @@
                     <h3>Registrations are Closed</h3>
                     <p class="closed-text">
                         The magic has begun! <br>
-                        <span class="highlight-text">TED University Students:</span> If you still wish to join, please contact us via Instagram <a href="https://www.instagram.com/gdgoncampustedu/" target="_blank" class="insta-link">@gdgoncampustedu</a>.
+                        <span class="highlight-text">TED University Students:</span> If you still wish to join, please
+                        contact us via Instagram <a href="https://www.instagram.com/gdgoncampustedu/" target="_blank"
+                            class="insta-link">@gdgoncampustedu</a>.
                     </p>
                     <p class="closed-subtext">External registrations are now closed. See you next year!</p>
                     <div class="shimmer-overlay"></div>
                 </div>
             </div>
         </section>
-        
+
         <footer>
             <div class="social-icons">
-                <a href="https://www.instagram.com/gdgoncampustedu/" target="_blank" class="social-icon instagram" aria-label="Instagram">
+                <a href="https://www.instagram.com/gdgoncampustedu/" target="_blank" class="social-icon instagram"
+                    aria-label="Instagram">
                     <i class="fa-brands fa-instagram"></i>
                 </a>
-                <a href="https://www.tiktok.com/@gdgoncampustedu" target="_blank" class="social-icon tiktok" aria-label="TikTok">
+                <a href="https://www.tiktok.com/@gdgoncampustedu" target="_blank" class="social-icon tiktok"
+                    aria-label="TikTok">
                     <i class="fa-brands fa-tiktok"></i>
                 </a>
-                <a href="https://chat.whatsapp.com/Lvaq7kfMs298CoHqPLnk1F?mode=hqrc" target="_blank" class="social-icon whatsapp" aria-label="WhatsApp">
+                <a href="https://chat.whatsapp.com/Lvaq7kfMs298CoHqPLnk1F?mode=hqrc" target="_blank"
+                    class="social-icon whatsapp" aria-label="WhatsApp">
                     <i class="fa-brands fa-whatsapp"></i>
                 </a>
             </div>
@@ -199,6 +259,16 @@
         </footer>
     </div>
 
-    <script src="script.js"></script>
+
+
+    <div class="fixed-logo-left">
+        <img src="assets/tedu_logo.png" alt="TED University Logo" class="partner-logo tedu-logo">
+    </div>
+    <div class="fixed-logo-right">
+        <img src="assets/gdglogo.png" alt="GDG Logo" class="partner-logo gdg-logo">
+    </div>
+
+    <script src="script.js?v=2"></script>
 </body>
+
 </html>

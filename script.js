@@ -1,28 +1,4 @@
-// Countdown Timer Logic
-const eventDate = new Date('December 20, 2025 00:00:00').getTime();
-
-function updateCountdown() {
-    const now = new Date().getTime();
-    let distance = eventDate - now;
-
-    if (distance < 0) {
-        document.getElementById('countdown').innerHTML = '<div class="time-unit"><span>00</span><label>Event Started!</label></div>';
-        return;
-    }
-
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    document.getElementById('days').innerText = days < 10 ? '0' + days : days;
-    document.getElementById('hours').innerText = hours < 10 ? '0' + hours : hours;
-    document.getElementById('minutes').innerText = minutes < 10 ? '0' + minutes : minutes;
-    document.getElementById('seconds').innerText = seconds < 10 ? '0' + seconds : seconds;
-}
-
-setInterval(updateCountdown, 1000);
-updateCountdown();
+// Countdown Timer Logic Removed for Event Day
 
 // Snow Animation Logic
 const canvas = document.getElementById('snow-canvas');
@@ -74,7 +50,7 @@ function initSnow() {
 
 function animateSnow() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    
+
     snowflakes.forEach(flake => {
         flake.update();
         flake.draw();
@@ -95,7 +71,7 @@ accordions.forEach(accordion => {
     accordion.addEventListener('click', () => {
         accordion.classList.toggle('active');
         const content = accordion.nextElementSibling;
-        
+
         if (accordion.classList.contains('active')) {
             content.style.maxHeight = content.scrollHeight + "px";
             content.style.padding = "0 0 1.5rem 0";
@@ -112,7 +88,7 @@ animateSnow();
 function toggleTeamInput(show) {
     const teamMembersGroup = document.getElementById('team-members-group');
     const teamMembersInput = document.getElementById('team-members');
-    
+
     if (show) {
         teamMembersGroup.style.display = 'block';
         teamMembersInput.setAttribute('required', 'required');
@@ -131,7 +107,7 @@ const statusMsg = document.getElementById('form-status');
 if (form) {
     form.addEventListener('submit', e => {
         e.preventDefault();
-        
+
         // Show loading state
         const submitBtn = form.querySelector('.submit-btn');
         const originalBtnText = submitBtn.innerText;
@@ -139,7 +115,7 @@ if (form) {
         submitBtn.innerText = 'Sending...';
         statusMsg.style.display = 'none';
 
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
             .then(response => {
                 statusMsg.innerText = "Registration Successful! Welcome to Jingle Jam!";
                 statusMsg.style.color = "#4ade80"; // Success Green
@@ -154,20 +130,20 @@ if (form) {
                 var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 9999 };
 
                 function randomInRange(min, max) {
-                  return Math.random() * (max - min) + min;
+                    return Math.random() * (max - min) + min;
                 }
 
-                var interval = setInterval(function() {
-                  var timeLeft = animationEnd - Date.now();
+                var interval = setInterval(function () {
+                    var timeLeft = animationEnd - Date.now();
 
-                  if (timeLeft <= 0) {
-                    return clearInterval(interval);
-                  }
+                    if (timeLeft <= 0) {
+                        return clearInterval(interval);
+                    }
 
-                  var particleCount = 50 * (timeLeft / duration);
-                  // since particles fall down, start a bit higher than random
-                  confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } }));
-                  confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } }));
+                    var particleCount = 50 * (timeLeft / duration);
+                    // since particles fall down, start a bit higher than random
+                    confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } }));
+                    confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } }));
                 }, 250);
             })
             .catch(error => {
@@ -179,4 +155,74 @@ if (form) {
                 submitBtn.innerText = originalBtnText;
             });
     });
+}
+
+// PDF Modal Logic
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('pdf-modal');
+    const viewBtn = document.getElementById('view-guide-btn');
+    const closeBtn = document.querySelector('.close-modal');
+
+    if (viewBtn && modal && closeBtn) {
+        viewBtn.addEventListener('click', () => {
+            modal.style.display = 'flex';
+            // Small delay to allow display:flex to apply before opacity transition
+            setTimeout(() => {
+                modal.classList.add('show');
+            }, 10);
+        });
+
+        closeBtn.addEventListener('click', () => {
+            modal.classList.remove('show');
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 300); // Wait for transition
+        });
+
+        // Close when clicking outside
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.classList.remove('show');
+                setTimeout(() => {
+                    modal.style.display = 'none';
+                }, 300);
+            }
+        });
+    }
+});
+
+// Language Toggle Logic
+// Language Toggle Logic
+function initLanguageToggle() {
+    const langToggle = document.getElementById('lang-toggle');
+    const pdfFrame = document.getElementById('pdf-frame');
+    const downloadLink = document.getElementById('download-link');
+
+    if (langToggle && pdfFrame && downloadLink) {
+        console.log('Initializing language toggle');
+        // Remove existing listeners if any (not easily possible without reference, but this init should run once)
+
+        langToggle.addEventListener('change', () => {
+            console.log('Language toggle changed. Checked:', langToggle.checked);
+            if (langToggle.checked) {
+                // English Selected
+                console.log('Switching to English PDF');
+                pdfFrame.src = 'assets/guide_en.pdf#navpanes=0';
+                downloadLink.href = 'assets/guide_en.pdf';
+            } else {
+                // Turkish Selected (Default)
+                console.log('Switching to Turkish PDF');
+                pdfFrame.src = 'assets/guide_tr.pdf#navpanes=0';
+                downloadLink.href = 'assets/guide_tr.pdf';
+            }
+        });
+    } else {
+        console.error('PDF elements not found:', { langToggle, pdfFrame, downloadLink });
+    }
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initLanguageToggle);
+} else {
+    initLanguageToggle();
 }
