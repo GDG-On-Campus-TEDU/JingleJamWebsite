@@ -231,36 +231,48 @@ if (document.readyState === 'loading') {
 document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('teams-modal');
     const btn = document.getElementById('view-teams-btn');
-    const span = document.getElementsByClassName('close-modal')[0];
-    const teamsGrid = document.getElementById('teams-grid');
-    const searchInput = document.getElementById('team-search');
-    
+    const closeBtn = document.getElementById('close-teams-modal');
+    const teamsContainer = document.getElementById('teams-container');
+    const searchInput = document.getElementById('teams-search');
+
     let allTeams = [];
 
-    if (btn && modal && span) {
+    if (btn && modal && closeBtn) {
         // Open Modal
-        btn.onclick = function() {
+        btn.onclick = function () {
             modal.style.display = "block";
+            document.body.style.overflow = "hidden"; // Prevent body scroll
             if (allTeams.length === 0) {
                 fetchTeams();
             }
         }
 
         // Close Modal
-        span.onclick = function() {
+        closeBtn.onclick = function () {
             modal.style.display = "none";
+            document.body.style.overflow = "auto";
         }
 
         // Close on outside click
-        window.onclick = function(event) {
-            if (event.target == modal) {
+        window.addEventListener('click', function (event) {
+            if (event.target === modal) {
                 modal.style.display = "none";
+                document.body.style.overflow = "auto";
             }
-        }
+        });
+
+        // Close on Escape key
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape' && modal.style.display === 'block') {
+                modal.style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+        });
     }
 
     // Fetch Teams Data
     async function fetchTeams() {
+        teamsContainer.innerHTML = '<div class="loading-spinner">Takımlar yükleniyor...</div>';
         try {
             const response = await fetch('assets/teams.json');
             if (!response.ok) throw new Error('Failed to load teams');
@@ -268,65 +280,59 @@ document.addEventListener('DOMContentLoaded', () => {
             renderTeams(allTeams);
         } catch (error) {
             console.error('Error fetching teams:', error);
-            teamsGrid.innerHTML = '<div class="no-results">Failed to load teams data. Please try again later.</div>';
+            teamsContainer.innerHTML = '<div class="no-results">Takım verileri yüklenemedi. Lütfen daha sonra tekrar deneyin.</div>';
         }
     }
 
     // Render Teams
     function renderTeams(teams) {
-        teamsGrid.innerHTML = '';
-        
+        teamsContainer.innerHTML = '';
+
         if (teams.length === 0) {
-            teamsGrid.innerHTML = '<div class="no-results">No teams found matching your search.</div>';
+            teamsContainer.innerHTML = '<div class="no-results">Aramanızla eşleşen takım bulunamadı.</div>';
             return;
         }
 
         teams.forEach(team => {
             const teamCard = document.createElement('div');
             teamCard.className = 'team-card';
-            
-            // Extract members (filtering out null/empty values)
-            const members = [
-                team['Team Member 1 '], // Note the space in key from Excel
-                team['Team Member 2'],
-                team['Team Member 3'],
-                team['Team Member 4'],
-                team['Team Member 5']
-            ].filter(m => m && typeof m === 'string' && m.trim() !== '');
 
-            const membersHtml = members.map(m => `<li>${m}</li>`).join('');
+            const participationBadge = team.participationType === 'Online'
+                ? '<span class="participation-badge online">🌐 Online</span>'
+                : '<span class="participation-badge physical">🏢 Physical</span>';
+
+            const membersHtml = team.members.map(m => `<li>${m}</li>`).join('');
 
             teamCard.innerHTML = `
-                <div class="team-number">Team ${team['Team Number']}</div>
+                <div class="team-header">
+                    <div class="team-number">Takım ${team.teamNumber}</div>
+                    ${participationBadge}
+                </div>
                 <ul class="team-members">
                     ${membersHtml}
                 </ul>
             `;
-            
-            teamsGrid.appendChild(teamCard);
+
+            teamsContainer.appendChild(teamCard);
         });
     }
 
     // Search Functionality
     if (searchInput) {
         searchInput.addEventListener('input', (e) => {
-            const searchTerm = e.target.value.toLowerCase();
-            
+            const searchTerm = e.target.value.toLowerCase().trim();
+
+            if (searchTerm === '') {
+                renderTeams(allTeams);
+                return;
+            }
+
             const filteredTeams = allTeams.filter(team => {
-                // Check if any member name matches the search term
-                const members = [
-                    team['Team Member 1 '],
-                    team['Team Member 2'],
-                    team['Team Member 3'],
-                    team['Team Member 4'],
-                    team['Team Member 5']
-                ];
-                
-                return members.some(member => 
-                    member && typeof member === 'string' && member.toLowerCase().includes(searchTerm)
+                return team.members.some(member =>
+                    member.toLowerCase().includes(searchTerm)
                 );
             });
-            
+
             renderTeams(filteredTeams);
         });
     }

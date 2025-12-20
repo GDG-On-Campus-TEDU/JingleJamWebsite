@@ -1227,7 +1227,12 @@ input:checked+.toggle-slider:before {
     display: block;
 }
 
-/* Modal Styles Removed */
+/* Remove Modal Styles that are no longer needed */
+.modal,
+.modal-content,
+.close-modal {
+    display: none !important;
+}
 
 /* Schedule Section */
 .schedule-section {
@@ -1398,7 +1403,56 @@ input:checked+.toggle-slider:before {
     }
 }
 
+/* Teams Button */
+.teams-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.view-teams-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+    background: linear-gradient(45deg, var(--christmas-red), var(--christmas-dark-red));
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(255, 62, 62, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.view-teams-btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 10px 30px rgba(255, 62, 62, 0.4);
+}
+
+.view-teams-btn span {
+    font-size: 1.4rem;
+}
+
 /* Teams Modal Styles */
+.teams-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+}
+
 .modal {
     display: none;
     position: fixed;
@@ -1577,4 +1631,54 @@ input:checked+.toggle-slider:before {
     text-align: center;
     padding: 2rem;
     color: rgba(255, 255, 255, 0.6);
+}
+.team-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.participation-badge {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+    font-weight: 600;
+}
+
+.participation-badge.online {
+    background: rgba(59, 130, 246, 0.2);
+    color: #60a5fa;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.participation-badge.physical {
+    background: rgba(47, 133, 90, 0.2);
+    color: #4ade80;
+    border: 1px solid rgba(47, 133, 90, 0.3);
+}
+
+/* Mobile responsiveness for teams */
+@media (max-width: 768px) {
+    .view-teams-btn {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .teams-modal-content {
+        margin: 2% auto;
+        padding: 1.5rem;
+        width: 95%;
+    }
+
+    .teams-container {
+        grid-template-columns: 1fr;
+        max-height: 60vh;
+    }
+
+    .teams-modal-header h2 {
+        font-size: 1.8rem;
+    }
 }

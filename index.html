@@ -84,28 +84,26 @@
                 </div>
             </section>
 
-            <div class="teams-cta-container" style="text-align: center; margin-bottom: 2rem;">
-                <button id="view-teams-btn" class="register-btn" style="font-size: 1.2rem; padding: 1rem 3rem;">
-                    <span>View Teams</span>
-                    <div class="btn-glow"></div>
+            <!-- View Teams Button -->
+            <div class="teams-button-container">
+                <button id="view-teams-btn" class="view-teams-btn">
+                    <span>🎄</span> Takımları Görüntüle <span>🎄</span>
                 </button>
             </div>
         </main>
 
         <!-- Teams Modal -->
-        <div id="teams-modal" class="modal">
-            <div class="modal-content teams-modal-content">
-                <span class="close-modal">&times;</span>
-                <h2>Jingle Web Jam Teams</h2>
-
-                <div class="search-container">
-                    <input type="text" id="team-search" placeholder="Search for your name..." class="glass-input">
-                    <i class="fa-solid fa-search search-icon"></i>
+        <div id="teams-modal" class="teams-modal">
+            <div class="teams-modal-content">
+                <div class="teams-modal-header">
+                    <h2>🎅 Takımlar 🎅</h2>
+                    <button id="close-teams-modal" class="close-teams-modal">&times;</button>
                 </div>
-
-                <div id="teams-grid" class="teams-grid">
-                    <!-- Teams will be populated here via JS -->
-                    <div class="loading-spinner">Loading teams...</div>
+                <div class="teams-search-container">
+                    <input type="text" id="teams-search" placeholder="İsminizi arayın..." class="teams-search-input">
+                </div>
+                <div id="teams-container" class="teams-container">
+                    <!-- Teams will be loaded here -->
                 </div>
             </div>
         </div>
@@ -294,7 +292,7 @@
         <img src="assets/gdglogo.png" alt="GDG Logo" class="partner-logo gdg-logo">
     </div>
 
-    <script src="script.js?v=3"></script>
+    <script src="script.js?v=2"></script>
 </body>
 
 </html>
