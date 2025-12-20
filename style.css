@@ -1856,3 +1856,36 @@ input:checked+.toggle-slider:before {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
+/* Animated Thank You Title */
+.thank-you-title {
+    background: linear-gradient(to right, #e74c3c, #f1c40f, #2ecc71, #3498db, #9b59b6, #e74c3c);
+    background-size: 200% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: shine 3s linear infinite;
+    text-shadow: none; /* Remove shadow to make gradient visible */
+    font-size: 4rem; /* Make it slightly bigger */
+}
+
+@keyframes shine {
+    to {
+        background-position: 200% center;
+    }
+}
+
+.see-you-message {
+    font-size: 1.5rem;
+    color: #f1c40f;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
