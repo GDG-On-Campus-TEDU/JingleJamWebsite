@@ -1,26 +1,21 @@
 [
   {
-    "teamNumber": 1,
+    "teamNumber": 45,
     "members": [
-      "Yusuf Yıldız"
+      "Mehmet Ali Selvet"
     ],
-    "websiteLink": "https://yusuf-yildiz34.github.io/jingle-webjam-site/"
+    "websiteLink": "https://jinglejam.aliselvet.xyz/",
+    "rank": 1,
+    "score": 34.25
   },
   {
-    "teamNumber": 2,
+    "teamNumber": 48,
+    "rank": 2,
+    "score": 28.5,
     "members": [
-      "Arda Koca",
-      "Mustafa Alp Eskitürk"
+      "Unknown Member"
     ],
-    "websiteLink": "https://6946befbd3f2d40a9fb247b4--aesthetic-jelly-78890b.netlify.app/"
-  },
-  {
-    "teamNumber": 4,
-    "members": [
-      "Maksim Zhila",
-      "Youness"
-    ],
-    "websiteLink": "https://928f0990-f850-4ec9-9840-e945f30a5797-00-202kjdimezj9c.sisko.replit.dev/index.php"
+    "websiteLink": ""
   },
   {
     "teamNumber": 5,
@@ -29,109 +24,18 @@
       "Mertcan Gerhardt",
       "Poyraz Koca"
     ],
-    "websiteLink": "https://luminisnewyear.netlify.app"
-  },
-  {
-    "teamNumber": 9,
-    "members": [
-      "Ahmet Bahadır Avcıbaş",
-      "Kutay Altay",
-      "Damla Kahya",
-      "Tolga Özdoğan"
-    ],
-    "websiteLink": "https://aquamarine-crumble-780eef.netlify.app/"
+    "websiteLink": "https://luminisnewyear.netlify.app",
+    "rank": 3,
+    "score": 26.75
   },
   {
     "teamNumber": 10,
     "members": [
       "Egemen Asım Ersoy"
     ],
-    "websiteLink": "https://jinglepostcard.netlify.app/"
-  },
-  {
-    "teamNumber": 11,
-    "members": [
-      "Cem Baba",
-      "Mert Berat Taşkaya",
-      "Mustafa Günay"
-    ],
-    "websiteLink": "https://jngle-web-jam-5fj4.vercel.app/"
-  },
-  {
-    "teamNumber": 12,
-    "members": [
-      "Hüseyin Emre Çelik",
-      "Eylül İlksen Erdem"
-    ],
-    "websiteLink": "https://eo.gl/c/"
-  },
-  {
-    "teamNumber": 13,
-    "members": [
-      "Ahmet Kaan Avcı",
-      "Kerem Çamur"
-    ],
-    "websiteLink": "https://reliable-daifuku-1d9844.netlify.app/"
-  },
-  {
-    "teamNumber": 16,
-    "members": [
-      "Serdar Yıldız"
-    ],
-    "websiteLink": "https://jinglewebjam.web.app/"
-  },
-  {
-    "teamNumber": 20,
-    "members": [
-      "Elif Alptekin",
-      "Aslı Algın"
-    ],
-    "websiteLink": "https://resolutiontracker2026.netlify.app/"
-  },
-  {
-    "teamNumber": 22,
-    "members": [
-      "Eralp Duman",
-      "Taylan Kayalı",
-      "Hikmet Mert Özkan"
-    ],
-    "websiteLink": "https://heroic-palmier-60ab4c.netlify.app/"
-  },
-  {
-    "teamNumber": 23,
-    "members": [
-      "Berk Altay",
-      "İlayda Dim",
-      "Ege Karaca"
-    ],
-    "websiteLink": "https://agent-6946c133e7b5a410f22f897b--jinglewrapped.netlify.app/"
-  },
-  {
-    "teamNumber": 24,
-    "members": [
-      "Elif Deniz Kaya",
-      "Eylül Esma Mendeş"
-    ],
-    "websiteLink": "https://leafy-kleicha-4de0e4.netlify.app/"
-  },
-  {
-    "teamNumber": 27,
-    "members": [
-      "Reha Görkem Eyler",
-      "Hatice Melike Karakaya",
-      "Ozan Özen",
-      "Zeynep Kayra Kınçak"
-    ],
-    "websiteLink": "https://caseylerjinglewebjam.netlify.app/"
-  },
-  {
-    "teamNumber": 30,
-    "members": [
-      "Duru Türkmen",
-      "Oğuz Eryılmaz",
-      "Ela Nur Yerli"
-    ],
-    "websiteLink": "https://6946c2b5700dcb141109f45c--startling-marshmallow-88e852.netlify.app"
+    "websiteLink": "https://jinglepostcard.netlify.app/",
+    "rank": 4,
+    "score": 26.0
   },
   {
     "teamNumber": 31,
@@ -141,29 +45,74 @@
       "Kıvanç Ünaldı",
       "Abdülkadir Karakuş"
     ],
-    "websiteLink": "https://jinnglejam.netlify.app"
+    "websiteLink": "https://jinnglejam.netlify.app",
+    "rank": 5,
+    "score": 24.5
   },
   {
-    "teamNumber": 38,
+    "teamNumber": 11,
     "members": [
-      "Dafina Peci",
-      "Arjetë Llapashtica"
+      "Cem Baba",
+      "Mert Berat Taşkaya",
+      "Mustafa Günay"
     ],
-    "websiteLink": "https://github.com/dafinapeci/Jingle-Web-Jam.git"
+    "websiteLink": "https://jngle-web-jam-5fj4.vercel.app/",
+    "rank": 6,
+    "score": 24.0
   },
   {
-    "teamNumber": 42,
+    "teamNumber": 9,
     "members": [
-      "Mazhar Umut Odacı"
+      "Ahmet Bahadır Avcıbaş",
+      "Kutay Altay",
+      "Damla Kahya",
+      "Tolga Özdoğan"
     ],
-    "websiteLink": "https://noelify.netlify.app/"
+    "websiteLink": "https://aquamarine-crumble-780eef.netlify.app/",
+    "rank": 7,
+    "score": 23.4
   },
   {
-    "teamNumber": 45,
+    "teamNumber": 47,
     "members": [
-      "Mehmet Ali Selvet"
+      "Recephan Kesmeci"
     ],
-    "websiteLink": "https://jinglejam.aliselvet.xyz/"
+    "websiteLink": "https://jingle-web-jam-website.vercel.app",
+    "rank": 8,
+    "score": 21.2
+  },
+  {
+    "teamNumber": 23,
+    "members": [
+      "Berk Altay",
+      "İlayda Dim",
+      "Ege Karaca"
+    ],
+    "websiteLink": "https://agent-6946c133e7b5a410f22f897b--jinglewrapped.netlify.app/",
+    "rank": 9,
+    "score": 20.0
+  },
+  {
+    "teamNumber": 27,
+    "members": [
+      "Reha Görkem Eyler",
+      "Hatice Melike Karakaya",
+      "Ozan Özen",
+      "Zeynep Kayra Kınçak"
+    ],
+    "websiteLink": "https://caseylerjinglewebjam.netlify.app/",
+    "rank": 9,
+    "score": 20.0
+  },
+  {
+    "teamNumber": 4,
+    "members": [
+      "Maksim Zhila",
+      "Youness"
+    ],
+    "websiteLink": "https://928f0990-f850-4ec9-9840-e945f30a5797-00-202kjdimezj9c.sisko.replit.dev/index.php",
+    "rank": 11,
+    "score": 19.3
   },
   {
     "teamNumber": 46,
@@ -173,13 +122,135 @@
       "Ali Köprücü",
       "İbrahim Efe Yılmaz"
     ],
-    "websiteLink": "https://gregarious-figolla-19c7e5.netlify.app/"
+    "websiteLink": "https://gregarious-figolla-19c7e5.netlify.app/",
+    "rank": 12,
+    "score": 19.25
   },
   {
-    "teamNumber": 47,
+    "teamNumber": 20,
     "members": [
-      "Recephan Kesmeci"
+      "Elif Alptekin",
+      "Aslı Algın"
     ],
-    "websiteLink": "https://jingle-web-jam-website.vercel.app"
+    "websiteLink": "https://resolutiontracker2026.netlify.app/",
+    "rank": 13,
+    "score": 19.17
+  },
+  {
+    "teamNumber": 12,
+    "members": [
+      "Hüseyin Emre Çelik",
+      "Eylül İlksen Erdem"
+    ],
+    "websiteLink": "https://eo.gl/c/",
+    "rank": 14,
+    "score": 18.5
+  },
+  {
+    "teamNumber": 26,
+    "rank": 14,
+    "score": 18.5,
+    "members": [
+      "Unknown Member"
+    ],
+    "websiteLink": ""
+  },
+  {
+    "teamNumber": 2,
+    "members": [
+      "Arda Koca",
+      "Mustafa Alp Eskitürk"
+    ],
+    "websiteLink": "https://6946befbd3f2d40a9fb247b4--aesthetic-jelly-78890b.netlify.app/",
+    "rank": 16,
+    "score": 17.67
+  },
+  {
+    "teamNumber": 22,
+    "members": [
+      "Eralp Duman",
+      "Taylan Kayalı",
+      "Hikmet Mert Özkan"
+    ],
+    "websiteLink": "https://heroic-palmier-60ab4c.netlify.app/",
+    "rank": 17,
+    "score": 17.5
+  },
+  {
+    "teamNumber": 24,
+    "members": [
+      "Elif Deniz Kaya",
+      "Eylül Esma Mendeş"
+    ],
+    "websiteLink": "https://leafy-kleicha-4de0e4.netlify.app/",
+    "rank": 17,
+    "score": 17.5
+  },
+  {
+    "teamNumber": 13,
+    "members": [
+      "Ahmet Kaan Avcı",
+      "Kerem Çamur"
+    ],
+    "websiteLink": "https://reliable-daifuku-1d9844.netlify.app/",
+    "rank": 19,
+    "score": 17.4
+  },
+  {
+    "teamNumber": 30,
+    "members": [
+      "Duru Türkmen",
+      "Oğuz Eryılmaz",
+      "Ela Nur Yerli"
+    ],
+    "websiteLink": "https://6946c2b5700dcb141109f45c--startling-marshmallow-88e852.netlify.app",
+    "rank": 20,
+    "score": 16.5
+  },
+  {
+    "teamNumber": 42,
+    "members": [
+      "Mazhar Umut Odacı"
+    ],
+    "websiteLink": "https://noelify.netlify.app/",
+    "rank": 21,
+    "score": 15.0
+  },
+  {
+    "teamNumber": 16,
+    "members": [
+      "Serdar Yıldız"
+    ],
+    "websiteLink": "https://jinglewebjam.web.app/",
+    "rank": 22,
+    "score": 12.8
+  },
+  {
+    "teamNumber": 0,
+    "rank": 23,
+    "score": 14.0,
+    "members": [
+      "Ali Yiğit"
+    ],
+    "websiteLink": ""
+  },
+  {
+    "teamNumber": 1,
+    "members": [
+      "Yusuf Yıldız"
+    ],
+    "websiteLink": "https://yusuf-yildiz34.github.io/jingle-webjam-site/",
+    "rank": 24,
+    "score": 8.86
+  },
+  {
+    "teamNumber": 38,
+    "members": [
+      "Dafina Peci",
+      "Arjetë Llapashtica"
+    ],
+    "websiteLink": "https://github.com/dafinapeci/Jingle-Web-Jam.git",
+    "rank": 25,
+    "score": 7.0
   }
 ]

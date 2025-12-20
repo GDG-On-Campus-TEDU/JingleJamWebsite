@@ -288,14 +288,31 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderTeams(teams) {
         teamsContainer.innerHTML = '';
 
+        // Add Results Info Header
+        const infoHeader = document.createElement('div');
+        infoHeader.className = 'results-info';
+        infoHeader.innerHTML = `
+            <p>Evaluation Criteria: <strong>Max Jury Score: 24</strong> | <strong>Max Bonus Score: 16</strong></p>
+            <p>Total Possible Score: <strong>40</strong></p>
+        `;
+        teamsContainer.appendChild(infoHeader);
+
         if (teams.length === 0) {
-            teamsContainer.innerHTML = '<div class="no-results">No teams found matching your search.</div>';
+            teamsContainer.innerHTML += '<div class="no-results">No teams found matching your search.</div>';
             return;
         }
 
+        // Sort by rank
+        teams.sort((a, b) => a.rank - b.rank);
+
         teams.forEach(team => {
             const teamCard = document.createElement('div');
-            teamCard.className = 'team-card';
+            teamCard.className = `team-card ${team.rank === 1 ? 'gold-shimmer' : ''}`;
+
+            let rankDisplay = `<div class="rank-badge rank-${team.rank}">${team.rank}</div>`;
+            if (team.rank === 1) rankDisplay = '<div class="rank-badge rank-1">🥇 1</div>';
+            if (team.rank === 2) rankDisplay = '<div class="rank-badge rank-2">🥈 2</div>';
+            if (team.rank === 3) rankDisplay = '<div class="rank-badge rank-3">🥉 3</div>';
 
             let participationBadge = '';
             if (team.participationType) {
@@ -317,9 +334,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
             teamCard.innerHTML = `
                 <div class="team-header">
+                    ${rankDisplay}
                     <div class="team-number">Team ${team.teamNumber}</div>
                     ${participationBadge}
                 </div>
+                <div class="team-score">Score: ${team.score.toFixed(2)}</div>
                 <ul class="team-members">
                     ${membersHtml}
                 </ul>
