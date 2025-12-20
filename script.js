@@ -288,14 +288,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderTeams(teams) {
         teamsContainer.innerHTML = '';
 
-        // Add Results Info Header
-        const infoHeader = document.createElement('div');
-        infoHeader.className = 'results-info';
-        infoHeader.innerHTML = `
-            <p>Evaluation Criteria: <strong>Max Jury Score: 24</strong> | <strong>Max Bonus Score from Challenges: 16</strong></p>
-            <p>Total Possible Score: <strong>40</strong></p>
-        `;
-        teamsContainer.appendChild(infoHeader);
+
 
         if (teams.length === 0) {
             teamsContainer.innerHTML += '<div class="no-results">No teams found matching your search.</div>';

@@ -2035,3 +2035,53 @@ input:checked+.toggle-slider:before {
     font-weight: 700;
     color: white;
 }
+
+/* Scoreboard Layout Updates */
+.teams-modal-header {
+    display: flex;
+    justify-content: center; /* Center the title */
+    align-items: center;
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.teams-modal-header h2 {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+}
+
+.close-teams-modal {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.scoreboard-info {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    color: #e2e8f0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.scoreboard-info p {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.scoreboard-info strong {
+    color: var(--gold);
+    font-weight: 700;
+}
+
+/* Ensure search container has margin top if needed, but info box margin-bottom handles it */
+.teams-search-container {
+    margin-top: 0;
+}
