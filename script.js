@@ -207,13 +207,13 @@ function initLanguageToggle() {
             if (langToggle.checked) {
                 // English Selected
                 console.log('Switching to English PDF');
-                pdfFrame.src = 'assets/guide_en.pdf#view=FitH&navpanes=0';
-                downloadLink.href = 'assets/guide_en.pdf';
+                pdfFrame.src = 'assets/JINGLE%20WEB%20JAM%202025%20GUIDE%20(EN2).pdf#view=FitH&navpanes=0';
+                downloadLink.href = 'assets/JINGLE%20WEB%20JAM%202025%20GUIDE%20(EN2).pdf';
             } else {
                 // Turkish Selected (Default)
                 console.log('Switching to Turkish PDF');
-                pdfFrame.src = 'assets/guide_tr.pdf#view=FitH&navpanes=0';
-                downloadLink.href = 'assets/guide_tr.pdf';
+                pdfFrame.src = 'assets/JINGLE%20WEB%20JAM%202025%20GUIDE%20(TR2).pdf#view=FitH&navpanes=0';
+                downloadLink.href = 'assets/JINGLE%20WEB%20JAM%202025%20GUIDE%20(TR2).pdf';
             }
         });
     } else {
@@ -272,7 +272,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Fetch Teams Data
     async function fetchTeams() {
-        teamsContainer.innerHTML = '<div class="loading-spinner">Takımlar yükleniyor...</div>';
+        teamsContainer.innerHTML = '<div class="loading-spinner">Loading teams...</div>';
         try {
             const response = await fetch('assets/teams.json');
             if (!response.ok) throw new Error('Failed to load teams');
@@ -280,7 +280,7 @@ document.addEventListener('DOMContentLoaded', () => {
             renderTeams(allTeams);
         } catch (error) {
             console.error('Error fetching teams:', error);
-            teamsContainer.innerHTML = '<div class="no-results">Takım verileri yüklenemedi. Lütfen daha sonra tekrar deneyin.</div>';
+            teamsContainer.innerHTML = '<div class="no-results">Failed to load team data. Please try again later.</div>';
         }
     }
 
@@ -289,7 +289,7 @@ document.addEventListener('DOMContentLoaded', () => {
         teamsContainer.innerHTML = '';
 
         if (teams.length === 0) {
-            teamsContainer.innerHTML = '<div class="no-results">Aramanızla eşleşen takım bulunamadı.</div>';
+            teamsContainer.innerHTML = '<div class="no-results">No teams found matching your search.</div>';
             return;
         }
 
@@ -305,7 +305,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             teamCard.innerHTML = `
                 <div class="team-header">
-                    <div class="team-number">Takım ${team.teamNumber}</div>
+                    <div class="team-number">Team ${team.teamNumber}</div>
                     ${participationBadge}
                 </div>
                 <ul class="team-members">
