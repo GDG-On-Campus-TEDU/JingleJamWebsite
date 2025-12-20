@@ -207,12 +207,12 @@ function initLanguageToggle() {
             if (langToggle.checked) {
                 // English Selected
                 console.log('Switching to English PDF');
-                pdfFrame.src = 'assets/guide_en.pdf#navpanes=0';
+                pdfFrame.src = 'assets/guide_en.pdf#view=FitH&navpanes=0';
                 downloadLink.href = 'assets/guide_en.pdf';
             } else {
                 // Turkish Selected (Default)
                 console.log('Switching to Turkish PDF');
-                pdfFrame.src = 'assets/guide_tr.pdf#navpanes=0';
+                pdfFrame.src = 'assets/guide_tr.pdf#view=FitH&navpanes=0';
                 downloadLink.href = 'assets/guide_tr.pdf';
             }
         });
