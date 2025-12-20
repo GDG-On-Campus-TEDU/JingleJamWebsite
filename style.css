@@ -1792,3 +1792,67 @@ input:checked+.toggle-slider:before {
 .visit-website-btn span {
     font-size: 1.2em;
 }
+
+/* Thank You Section */
+.thank-you-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    margin: 2rem auto;
+    max-width: 800px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    animation: fadeIn 1s ease-out;
+}
+
+.thank-you-title {
+    font-family: 'Mountains of Christmas', cursive;
+    font-size: 3.5rem;
+    color: #e74c3c;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px rgba(231, 76, 60, 0.5);
+}
+
+.thank-you-message {
+    font-size: 1.2rem;
+    color: #ecf0f1;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.instagram-cta p {
+    font-size: 1.1rem;
+    color: #bdc3c7;
+    margin-bottom: 1.5rem;
+}
+
+.instagram-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(220, 39, 67, 0.4);
+}
+
+.instagram-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(220, 39, 67, 0.6);
+}
+
+.instagram-btn i {
+    font-size: 1.5rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
