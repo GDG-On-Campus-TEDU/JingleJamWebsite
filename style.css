@@ -1570,7 +1570,6 @@ input:checked+.toggle-slider:before {
 
 .close-teams-modal:hover {
     color: var(--christmas-red);
-    transform: scale(1.2);
 }
 
 .teams-search-container {
@@ -1940,6 +1939,7 @@ input:checked+.toggle-slider:before {
         transform: scale(1);
     }
 }
+
 /* Results Styling */
 .results-info {
     text-align: center;
@@ -1963,7 +1963,8 @@ input:checked+.toggle-slider:before {
 .rank-badge {
     font-size: 1.5rem;
     font-weight: 800;
-    margin-right: auto; /* Push to left */
+    margin-right: auto;
+    /* Push to left */
     padding: 0.5rem 1rem;
     border-radius: 10px;
     background: rgba(0, 0, 0, 0.3);
@@ -2039,7 +2040,8 @@ input:checked+.toggle-slider:before {
 /* Scoreboard Layout Updates */
 .teams-modal-header {
     display: flex;
-    justify-content: center; /* Center the title */
+    justify-content: center;
+    /* Center the title */
     align-items: center;
     position: relative;
     margin-bottom: 1.5rem;
