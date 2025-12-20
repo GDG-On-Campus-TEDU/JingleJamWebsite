@@ -83,7 +83,32 @@
                     </div>
                 </div>
             </section>
+
+            <div class="teams-cta-container" style="text-align: center; margin-bottom: 2rem;">
+                <button id="view-teams-btn" class="register-btn" style="font-size: 1.2rem; padding: 1rem 3rem;">
+                    <span>View Teams</span>
+                    <div class="btn-glow"></div>
+                </button>
+            </div>
         </main>
+
+        <!-- Teams Modal -->
+        <div id="teams-modal" class="modal">
+            <div class="modal-content teams-modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Jingle Web Jam Teams</h2>
+
+                <div class="search-container">
+                    <input type="text" id="team-search" placeholder="Search for your name..." class="glass-input">
+                    <i class="fa-solid fa-search search-icon"></i>
+                </div>
+
+                <div id="teams-grid" class="teams-grid">
+                    <!-- Teams will be populated here via JS -->
+                    <div class="loading-spinner">Loading teams...</div>
+                </div>
+            </div>
+        </div>
 
         <section id="resources" class="resources-section">
             <div class="resources-container">
@@ -269,7 +294,7 @@
         <img src="assets/gdglogo.png" alt="GDG Logo" class="partner-logo gdg-logo">
     </div>
 
-    <script src="script.js?v=2"></script>
+    <script src="script.js?v=3"></script>
 </body>
 
 </html>

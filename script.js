@@ -226,3 +226,108 @@ if (document.readyState === 'loading') {
 } else {
     initLanguageToggle();
 }
+
+// Teams Modal Logic
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('teams-modal');
+    const btn = document.getElementById('view-teams-btn');
+    const span = document.getElementsByClassName('close-modal')[0];
+    const teamsGrid = document.getElementById('teams-grid');
+    const searchInput = document.getElementById('team-search');
+    
+    let allTeams = [];
+
+    if (btn && modal && span) {
+        // Open Modal
+        btn.onclick = function() {
+            modal.style.display = "block";
+            if (allTeams.length === 0) {
+                fetchTeams();
+            }
+        }
+
+        // Close Modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Close on outside click
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    }
+
+    // Fetch Teams Data
+    async function fetchTeams() {
+        try {
+            const response = await fetch('assets/teams.json');
+            if (!response.ok) throw new Error('Failed to load teams');
+            allTeams = await response.json();
+            renderTeams(allTeams);
+        } catch (error) {
+            console.error('Error fetching teams:', error);
+            teamsGrid.innerHTML = '<div class="no-results">Failed to load teams data. Please try again later.</div>';
+        }
+    }
+
+    // Render Teams
+    function renderTeams(teams) {
+        teamsGrid.innerHTML = '';
+        
+        if (teams.length === 0) {
+            teamsGrid.innerHTML = '<div class="no-results">No teams found matching your search.</div>';
+            return;
+        }
+
+        teams.forEach(team => {
+            const teamCard = document.createElement('div');
+            teamCard.className = 'team-card';
+            
+            // Extract members (filtering out null/empty values)
+            const members = [
+                team['Team Member 1 '], // Note the space in key from Excel
+                team['Team Member 2'],
+                team['Team Member 3'],
+                team['Team Member 4'],
+                team['Team Member 5']
+            ].filter(m => m && typeof m === 'string' && m.trim() !== '');
+
+            const membersHtml = members.map(m => `<li>${m}</li>`).join('');
+
+            teamCard.innerHTML = `
+                <div class="team-number">Team ${team['Team Number']}</div>
+                <ul class="team-members">
+                    ${membersHtml}
+                </ul>
+            `;
+            
+            teamsGrid.appendChild(teamCard);
+        });
+    }
+
+    // Search Functionality
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            
+            const filteredTeams = allTeams.filter(team => {
+                // Check if any member name matches the search term
+                const members = [
+                    team['Team Member 1 '],
+                    team['Team Member 2'],
+                    team['Team Member 3'],
+                    team['Team Member 4'],
+                    team['Team Member 5']
+                ];
+                
+                return members.some(member => 
+                    member && typeof member === 'string' && member.toLowerCase().includes(searchTerm)
+                );
+            });
+            
+            renderTeams(filteredTeams);
+        });
+    }
+});
