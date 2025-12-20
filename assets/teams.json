@@ -17,9 +17,7 @@
     "teamNumber": 3,
     "participationType": "Physical",
     "members": [
-      "Aybars Alper",
-      "Yusuf Erdem İpek",
-      "Recephan Kesmeci"
+      "Aybars Alper"
     ]
   },
   {
@@ -168,7 +166,7 @@
     ]
   },
   {
-    "teamNumber": 21,
+    "teamNumber": 22,
     "participationType": "Physical",
     "members": [
       "Taylan Kayalı",
@@ -363,6 +361,20 @@
       "İbrahim Efe Yılmaz",
       "Berat Porsuk",
       "Ali Köprücü"
+    ]
+  },
+  {
+    "teamNumber": 47,
+    "participationType": "Physical",
+    "members": [
+      "Recephan Kesmeci"
+    ]
+  },
+  {
+    "teamNumber": 48,
+    "participationType": "Physical",
+    "members": [
+      "Yusuf Erdem İpek"
     ]
   }
 ]
