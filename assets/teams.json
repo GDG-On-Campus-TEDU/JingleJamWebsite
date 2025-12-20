@@ -1,380 +1,174 @@
 [
   {
     "teamNumber": 1,
-    "participationType": "Online",
     "members": [
-      "Abdulkadir Akcan"
-    ]
+      "yusuf yıldız"
+    ],
+    "websiteLink": "https://github.com/Yusuf-Yildiz34/jingle-webjam-site"
+  },
+  {
+    "teamNumber": 1,
+    "members": [
+      "yusuf yıldız"
+    ],
+    "websiteLink": "https://github.com/Yusuf-Yildiz34/jingle-webjam-site/settings/pages"
   },
   {
     "teamNumber": 2,
-    "participationType": "Online",
     "members": [
-      "Mustafa Can Akkuş"
-    ]
-  },
-  {
-    "teamNumber": 3,
-    "participationType": "Physical",
-    "members": [
-      "Aybars Alper"
-    ]
+      "Arda Koca",
+      "Mustafa Alp Eskitürk"
+    ],
+    "websiteLink": "https://6946befbd3f2d40a9fb247b4--aesthetic-jelly-78890b.netlify.app/"
   },
   {
     "teamNumber": 4,
-    "participationType": "Physical",
     "members": [
-      "Maksim Zhila",
-      "Noor ul Aden",
-      "Youness LAHDILI",
-      "Rauf Yusifov"
-    ]
+      "Maksim zhila and Youness"
+    ],
+    "websiteLink": "https://928f0990-f850-4ec9-9840-e945f30a5797-00-202kjdimezj9c.sisko.replit.dev/index.php"
   },
   {
     "teamNumber": 5,
-    "participationType": "Physical",
     "members": [
-      "Poyraz Koca",
-      "Sinan Mertcan Gerhardt",
-      "Yelda Sıla Mumcu"
-    ]
-  },
-  {
-    "teamNumber": 6,
-    "participationType": "Physical",
-    "members": [
-      "Ömer Fahri Kaya"
-    ]
-  },
-  {
-    "teamNumber": 7,
-    "participationType": "Online",
-    "members": [
-      "Başak Nehir Artan"
-    ]
-  },
-  {
-    "teamNumber": 8,
-    "participationType": "Physical",
-    "members": [
-      "Mustafa Günay"
-    ]
+      "Yelda Sıla Mumcu-Mertcan Gerhardt-Poyraz Koca"
+    ],
+    "websiteLink": "https://luminisnewyear.netlify.app"
   },
   {
     "teamNumber": 9,
-    "participationType": "Physical",
     "members": [
-      "Kutay Altay",
       "Ahmet Bahadır Avcıbaş",
-      "Tolga Özdoğan",
-      "Damla Kahya"
-    ]
+      "Kutay Altay",
+      "Damla Kahya",
+      "Tolga Özdoğan"
+    ],
+    "websiteLink": "https://aquamarine-crumble-780eef.netlify.app/"
   },
   {
     "teamNumber": 10,
-    "participationType": "Physical",
     "members": [
       "Egemen Asım Ersoy"
-    ]
+    ],
+    "websiteLink": "https://jinglepostcard.netlify.app/"
   },
   {
     "teamNumber": 11,
-    "participationType": "Physical",
     "members": [
-      "Cem Baba",
-      "Mert Berat Taşkaya"
-    ]
+      "Cem Baba Mert Berat Taşkaya Mustafa Günay"
+    ],
+    "websiteLink": "https://jngle-web-jam-5fj4.vercel.app/"
   },
   {
     "teamNumber": 12,
-    "participationType": "Physical",
     "members": [
-      "Hüseyin Emre Çelik",
-      "Eylül İlksen Erdem"
-    ]
+      "Hüseyin Emre Çelik | Eylül İlksen Erdem"
+    ],
+    "websiteLink": "https://eo.gl/c/"
   },
   {
     "teamNumber": 13,
-    "participationType": "Physical",
     "members": [
-      "Kerem Çamur",
-      "Ahmet Kaan Avcı"
-    ]
-  },
-  {
-    "teamNumber": 14,
-    "participationType": "Physical",
-    "members": [
-      "Nehirnaz Tunca"
-    ]
-  },
-  {
-    "teamNumber": 15,
-    "participationType": "Online",
-    "members": [
-      "Arda Fırat Gök",
-      "Nurullah Barış Çelik",
-      "Yakup Kahraman",
-      "Ömerhan Sancak"
-    ]
+      "Ahmet Kaan Avcı",
+      "Kerem Çamur"
+    ],
+    "websiteLink": "https://reliable-daifuku-1d9844.netlify.app/"
   },
   {
     "teamNumber": 16,
-    "participationType": "Physical",
     "members": [
-      "Busenur Arlı",
-      "Serdar Yildiz"
-    ]
-  },
-  {
-    "teamNumber": 17,
-    "participationType": "Online",
-    "members": [
-      "Dika Aprilio Wibowo"
-    ]
-  },
-  {
-    "teamNumber": 18,
-    "participationType": "Online",
-    "members": [
-      "İpek Kutlu"
-    ]
-  },
-  {
-    "teamNumber": 19,
-    "participationType": "Physical",
-    "members": [
-      "Burak Eren Polat",
-      "Arda Koca",
-      "Bukle Topaloğlu"
-    ]
+      "serdar yıldız"
+    ],
+    "websiteLink": "https://jinglewebjam.web.app/"
   },
   {
     "teamNumber": 20,
-    "participationType": "Physical",
     "members": [
       "Elif Alptekin",
       "Aslı Algın"
-    ]
-  },
-  {
-    "teamNumber": 21,
-    "participationType": "Online",
-    "members": [
-      "AIESEC",
-      "Şeyma Sarı"
-    ]
+    ],
+    "websiteLink": "https://resolutiontracker2026.netlify.app/"
   },
   {
     "teamNumber": 22,
-    "participationType": "Physical",
     "members": [
-      "Taylan Kayalı",
       "Eralp Duman",
+      "Taylan Kayalı",
       "Hikmet Mert Özkan"
-    ]
+    ],
+    "websiteLink": "https://heroic-palmier-60ab4c.netlify.app/"
   },
   {
     "teamNumber": 23,
-    "participationType": "Physical",
     "members": [
+      "Berk Altay",
       "İlayda Dim",
-      "Ege Karaca",
-      "Selim Berk Altay"
-    ]
+      "Ege Karaca"
+    ],
+    "websiteLink": "https://jinglewrapped.netlify.app"
   },
   {
     "teamNumber": 24,
-    "participationType": "Physical",
     "members": [
       "Elif Deniz Kaya",
       "Eylül Esma Mendeş"
-    ]
-  },
-  {
-    "teamNumber": 25,
-    "participationType": "Physical",
-    "members": [
-      "Seyyide Nur Aktoprak",
-      "Arzum Rasulova"
-    ]
-  },
-  {
-    "teamNumber": 26,
-    "participationType": "Physical",
-    "members": [
-      "Atilla Abbas"
-    ]
+    ],
+    "websiteLink": "https://leafy-kleicha-4de0e4.netlify.app/"
   },
   {
     "teamNumber": 27,
-    "participationType": "Physical/Online",
     "members": [
       "Reha Görkem Eyler",
       "Hatice Melike Karakaya",
       "Ozan Özen",
       "Zeynep Kayra Kınçak"
-    ]
-  },
-  {
-    "teamNumber": 28,
-    "participationType": "Physical",
-    "members": [
-      "Selin Göç"
-    ]
-  },
-  {
-    "teamNumber": 29,
-    "participationType": "Online",
-    "members": [
-      "Yağız Çakır"
-    ]
+    ],
+    "websiteLink": "https://caseylerjinglewebjam.netlify.app/"
   },
   {
     "teamNumber": 30,
-    "participationType": "Physical",
     "members": [
-      "Duru Türkmen",
-      "Ela Nur Yerli",
-      "Oğuz Eryılmaz"
-    ]
-  },
-  {
-    "teamNumber": 31,
-    "participationType": "Physical",
-    "members": [
-      "Eylül Akpınar",
-      "Abdulkadir Karakuş",
-      "Ömer Harmankaya",
-      "Kıvanç Ünaldı",
-      "İdil Duru Yavuzer"
-    ]
-  },
-  {
-    "teamNumber": 32,
-    "participationType": "Physical",
-    "members": [
-      "Ulaş Yürümez"
-    ]
-  },
-  {
-    "teamNumber": 33,
-    "participationType": "Physical",
-    "members": [
-      "Emir Louis Özatik"
-    ]
-  },
-  {
-    "teamNumber": 34,
-    "participationType": "Physical",
-    "members": [
-      "Yaren Saklavcı",
-      "Umutcan Okumuş",
-      "Ege Ottan"
-    ]
-  },
-  {
-    "teamNumber": 35,
-    "participationType": "Online",
-    "members": [
-      "Umut Can Konukçu"
-    ]
-  },
-  {
-    "teamNumber": 36,
-    "participationType": "Physical",
-    "members": [
-      "Mustafa Alp Eskitürk",
-      "Büşra Bigül",
-      "Mehmet Kayra Öztep"
-    ]
-  },
-  {
-    "teamNumber": 37,
-    "participationType": "Online",
-    "members": [
-      "Ebrar Esmanur Tokmak"
-    ]
+      "Duru Türkmen Oğuz eryılmaz Ela Nur yerli"
+    ],
+    "websiteLink": "https://6946c2b5700dcb141109f45c--startling-marshmallow-88e852.netlify.app"
   },
   {
     "teamNumber": 38,
-    "participationType": "Online",
     "members": [
       "Dafina Peci",
       "Arjetë Llapashtica"
-    ]
-  },
-  {
-    "teamNumber": 39,
-    "participationType": "Online",
-    "members": [
-      "Yusuf Yıldız"
-    ]
-  },
-  {
-    "teamNumber": 40,
-    "participationType": "Online",
-    "members": [
-      "Yiğit Arslan"
-    ]
-  },
-  {
-    "teamNumber": 41,
-    "participationType": "Online",
-    "members": [
-      "Emren Yılmaz"
-    ]
+    ],
+    "websiteLink": "https://github.com/dafinapeci/Jingle-Web-Jam.git"
   },
   {
     "teamNumber": 42,
-    "participationType": "Online",
     "members": [
       "Mazhar Umut Odacı"
-    ]
-  },
-  {
-    "teamNumber": 43,
-    "participationType": "Online",
-    "members": [
-      "Kadir Kerem Yıldırım"
-    ]
-  },
-  {
-    "teamNumber": 44,
-    "participationType": "Physical",
-    "members": [
-      "Ata Bayraktar"
-    ]
+    ],
+    "websiteLink": "https://noelify.netlify.app/"
   },
   {
     "teamNumber": 45,
-    "participationType": "Physical",
     "members": [
       "Mehmet Ali Selvet"
-    ]
+    ],
+    "websiteLink": "https://jinglejam.aliselvet.xyz/"
   },
   {
     "teamNumber": 46,
-    "participationType": "Physical",
     "members": [
-      "Yiğit Arda Kaderoğlu",
-      "İbrahim Efe Yılmaz",
       "Berat Porsuk",
-      "Ali Köprücü"
-    ]
+      "Yiğit Arda Kaderoğlu",
+      "Ali Köprücü",
+      "İbrahim Efe Yılmaz"
+    ],
+    "websiteLink": "https://gregarious-figolla-19c7e5.netlify.app/"
   },
   {
     "teamNumber": 47,
-    "participationType": "Physical",
     "members": [
       "Recephan Kesmeci"
-    ]
-  },
-  {
-    "teamNumber": 48,
-    "participationType": "Physical",
-    "members": [
-      "Yusuf Erdem İpek"
-    ]
+    ],
+    "websiteLink": "https://jingle-web-jam-website.vercel.app"
   }
 ]

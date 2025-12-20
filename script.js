@@ -297,11 +297,23 @@ document.addEventListener('DOMContentLoaded', () => {
             const teamCard = document.createElement('div');
             teamCard.className = 'team-card';
 
-            const participationBadge = team.participationType === 'Online'
-                ? '<span class="participation-badge online">🌐 Online</span>'
-                : '<span class="participation-badge physical">🏢 Physical</span>';
+            let participationBadge = '';
+            if (team.participationType) {
+                participationBadge = team.participationType === 'Online'
+                    ? '<span class="participation-badge online">🌐 Online</span>'
+                    : '<span class="participation-badge physical">🏢 Physical</span>';
+            }
 
             const membersHtml = team.members.map(m => `<li>${m}</li>`).join('');
+
+            let websiteBtn = '';
+            if (team.websiteLink) {
+                websiteBtn = `
+                    <a href="${team.websiteLink}" target="_blank" class="visit-website-btn">
+                        <span>🚀</span> Visit Website
+                    </a>
+                `;
+            }
 
             teamCard.innerHTML = `
                 <div class="team-header">
@@ -311,6 +323,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <ul class="team-members">
                     ${membersHtml}
                 </ul>
+                ${websiteBtn}
             `;
 
             teamsContainer.appendChild(teamCard);
